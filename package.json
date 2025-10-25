@@ -8,16 +8,25 @@
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "type-check": "tsc --noEmit",
-    "prepare": "husky"
+    "prepare": "husky",
+    "migration:generate": "typeorm-ts-node-commonjs migration:generate -d apps/api/ormconfig.ts",
+    "migration:run": "typeorm-ts-node-commonjs migration:run -d apps/api/ormconfig.ts",
+    "migration:revert": "typeorm-ts-node-commonjs migration:revert -d apps/api/ormconfig.ts"
   },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^11.0.0",
     "@nestjs/core": "^11.0.0",
     "@nestjs/platform-express": "^11.0.0",
+    "@nestjs/typeorm": "^11.0.0",
     "axios": "^1.6.0",
+    "better-sqlite3": "^12.4.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.2",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.8.0"
+    "rxjs": "^7.8.0",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.27"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",

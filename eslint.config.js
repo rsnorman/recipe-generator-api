@@ -62,4 +62,11 @@ module.exports = defineConfig([
       'no-var': 'error',
     },
   },
+  {
+    // Relax rules for test files
+    files: ['**/*.spec.ts', '**/*.spec.tsx', '**/*.test.ts', '**/*.test.tsx'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
 ]);
