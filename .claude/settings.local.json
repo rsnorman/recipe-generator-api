@@ -13,7 +13,8 @@
       "WebSearch",
       "Bash(source $CLAUDE_DIR:-$HOME/.claude/scripts/utils/git-utils.sh)",
       "Bash(is_on_main_branch)",
-      "Bash(create_spec_branch:*)"
+      "Bash(create_spec_branch:*)",
+      "Bash(NODE_ENV=test npx nx test:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,9 +1,7 @@
 export default {
   displayName: 'api-e2e',
   preset: '../../jest.preset.js',
-  globalSetup: '<rootDir>/src/support/global-setup.ts',
-  globalTeardown: '<rootDir>/src/support/global-teardown.ts',
-  setupFiles: ['<rootDir>/src/support/test-setup.ts'],
+  setupFilesAfterEnv: ['<rootDir>/../../apps/api/src/test-setup.ts'],
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': [
@@ -15,4 +13,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../coverage/api-e2e',
+  testTimeout: 30000,
 };

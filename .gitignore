@@ -43,3 +43,7 @@ Thumbs.db
 .cursor/rules/nx-rules.mdc
 .github/instructions/nx.instructions.md
 .env
+
+# Database files
+data/*.db
+data/*.db-*
